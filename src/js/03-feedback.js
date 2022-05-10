@@ -32,12 +32,10 @@ function onFormsubmit(evt) {
         message,
     }
 
-
     console.log(data);
+
     localStorage.removeItem(STORAGE_KEY);
     evt.currentTarget.reset();
-    
-    
 }
 
 
