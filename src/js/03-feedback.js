@@ -23,9 +23,20 @@ function onFormData() {
 
 function onFormsubmit(evt) {
     evt.preventDefault();
-    evt.currentTarget.reset();
+    
+    const email = evt.currentTarget.elements.email.value;
+    const message = evt.currentTarget.elements.message.value;
+
+    const data = {
+        email,
+        message,
+    }
+
+
+    console.log(data);
     localStorage.removeItem(STORAGE_KEY);
-    console.log(parseData);
+    evt.currentTarget.reset();
+    
     
 }
 
